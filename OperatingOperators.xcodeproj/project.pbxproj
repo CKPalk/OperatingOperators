@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB1A152C1BF9B8E9007FC2A9 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1A152B1BF9B8E9007FC2A9 /* GameViewController.swift */; };
 		DB580EC81BE9B8D600D453F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB580EC71BE9B8D600D453F1 /* AppDelegate.swift */; };
 		DB580ECA1BE9B8D600D453F1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB580EC91BE9B8D600D453F1 /* ViewController.swift */; };
 		DB580ECD1BE9B8D600D453F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB580ECB1BE9B8D600D453F1 /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DB1A152B1BF9B8E9007FC2A9 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		DB580EC41BE9B8D600D453F1 /* OperatingOperators.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OperatingOperators.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB580EC71BE9B8D600D453F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB580EC91BE9B8D600D453F1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -74,10 +76,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DB1A15271BF9B850007FC2A9 /* OperatingOperators */ = {
+			isa = PBXGroup;
+			children = (
+				DB1A152A1BF9B8CE007FC2A9 /* Source */,
+				DB580EC61BE9B8D600D453F1 /* OperatingOperators */,
+			);
+			name = OperatingOperators;
+			sourceTree = "<group>";
+		};
+		DB1A152A1BF9B8CE007FC2A9 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				DB1A152B1BF9B8E9007FC2A9 /* GameViewController.swift */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
 		DB580EBB1BE9B8D600D453F1 = {
 			isa = PBXGroup;
 			children = (
-				DB580EC61BE9B8D600D453F1 /* OperatingOperators */,
+				DB1A15271BF9B850007FC2A9 /* OperatingOperators */,
 				DB580EDB1BE9B8D600D453F1 /* OperatingOperatorsTests */,
 				DB580EE61BE9B8D600D453F1 /* OperatingOperatorsUITests */,
 				DB580EC51BE9B8D600D453F1 /* Products */,
@@ -257,6 +276,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB580ECA1BE9B8D600D453F1 /* ViewController.swift in Sources */,
+				DB1A152C1BF9B8E9007FC2A9 /* GameViewController.swift in Sources */,
 				DB580EC81BE9B8D600D453F1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -484,6 +504,7 @@
 				DB580EEE1BE9B8D600D453F1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DB580EEF1BE9B8D600D453F1 /* Build configuration list for PBXNativeTarget "OperatingOperatorsTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +513,7 @@
 				DB580EF11BE9B8D600D453F1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DB580EF21BE9B8D600D453F1 /* Build configuration list for PBXNativeTarget "OperatingOperatorsUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +522,7 @@
 				DB580EF41BE9B8D600D453F1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
