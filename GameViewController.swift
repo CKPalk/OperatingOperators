@@ -61,8 +61,9 @@ class GameViewController: UIViewController {
         operatorBot_out.setTitleColor(UIColor(red: 231, green: 0, blue: 0, alpha: 1), forState: UIControlState.Disabled)
     }
     
-    @IBAction func exitGame() {
-        navigationController?.popViewControllerAnimated(true)
+    @IBAction func exitGame(sender: UIButton) {
+        print("Going to exit")
+        
         print("Done");
     }
     
