@@ -80,12 +80,12 @@
                                         <rect key="frame" x="142" y="0.0" width="71" height="250"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4gD-7o-bqP" userLabel="Border Spacing">
-                                                <rect key="frame" x="0.0" y="0.0" width="71" height="5.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="71" height="6"/>
                                                 <animations/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ay0-UW-1DZ">
-                                                <rect key="frame" x="0.0" y="5" width="71" height="71"/>
+                                                <rect key="frame" x="0.0" y="6" width="71" height="71"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5lL-KA-t39">
                                                         <rect key="frame" x="2" y="2" width="67" height="67"/>
@@ -121,7 +121,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tHC-G0-rfN" userLabel="Spacing">
-                                                <rect key="frame" x="0.0" y="76" width="71" height="13"/>
+                                                <rect key="frame" x="0.0" y="77" width="71" height="13"/>
                                                 <animations/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <constraints>
@@ -134,7 +134,7 @@
                                                 </variation>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qfp-nD-2vG">
-                                                <rect key="frame" x="0.0" y="89" width="71" height="71"/>
+                                                <rect key="frame" x="0.0" y="90" width="71" height="71"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DgV-ic-870">
                                                         <rect key="frame" x="2" y="2" width="67" height="67"/>
@@ -169,12 +169,12 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IOj-aT-88a" userLabel="Spacing">
-                                                <rect key="frame" x="0.0" y="160" width="71" height="13"/>
+                                                <rect key="frame" x="0.0" y="161" width="71" height="13"/>
                                                 <animations/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mjx-gg-OGl">
-                                                <rect key="frame" x="0.0" y="173" width="71" height="71"/>
+                                                <rect key="frame" x="0.0" y="174" width="71" height="71"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sSI-SN-mxK">
                                                         <rect key="frame" x="2" y="2" width="67" height="67"/>
@@ -209,7 +209,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i4n-Oa-8cM" userLabel="Border Spacing">
-                                                <rect key="frame" x="0.0" y="244" width="71" height="5.5"/>
+                                                <rect key="frame" x="0.0" y="245" width="71" height="6"/>
                                                 <animations/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             </view>
@@ -282,13 +282,28 @@
                                                 <color key="textColor" red="0.31336206896551722" green="0.94901960784313721" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FY2-hg-KI8">
+                                                <rect key="frame" x="104" y="8" width="30" height="30"/>
+                                                <animations/>
+                                                <state key="normal" title="Exit"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ii1-iD-p1X">
+                                                <rect key="frame" x="104" y="8" width="30" height="30"/>
+                                                <animations/>
+                                                <state key="normal" title="Exit"/>
+                                                <connections>
+                                                    <action selector="exitGame" destination="BYZ-38-t0r" eventType="touchUpInside" id="qMz-Qk-kt0"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <animations/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="aQN-Au-C3O" firstAttribute="top" secondItem="muz-DR-etT" secondAttribute="top" constant="20" id="5I7-dj-rqs"/>
+                                            <constraint firstAttribute="trailing" secondItem="FY2-hg-KI8" secondAttribute="trailing" constant="8" id="8jg-hO-yWt"/>
                                             <constraint firstItem="aQN-Au-C3O" firstAttribute="leading" secondItem="muz-DR-etT" secondAttribute="leading" constant="20" id="c4v-fz-9wJ"/>
                                             <constraint firstAttribute="bottom" secondItem="aQN-Au-C3O" secondAttribute="bottom" constant="20" id="nQG-sq-lpA"/>
+                                            <constraint firstItem="FY2-hg-KI8" firstAttribute="top" secondItem="muz-DR-etT" secondAttribute="top" constant="8" id="oP8-nn-0b9"/>
                                             <constraint firstAttribute="trailing" secondItem="aQN-Au-C3O" secondAttribute="trailing" constant="20" id="swt-az-LLg"/>
                                         </constraints>
                                     </view>

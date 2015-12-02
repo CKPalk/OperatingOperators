@@ -16,6 +16,7 @@ struct equation {
 }
 
 let Operators: Array<Character> = [ "+", "−", "×", "÷" ]
+let OperatorSet: Set<Character> = [ "+", "−", "×", "÷" ]
 
 
 
@@ -59,6 +60,11 @@ class GameViewController: UIViewController {
         operatorTop_out.setTitleColor(UIColor(red: 231, green: 0, blue: 0, alpha: 1), forState: UIControlState.Disabled)
         operatorMid_out.setTitleColor(UIColor(red: 231, green: 0, blue: 0, alpha: 1), forState: UIControlState.Disabled)
         operatorBot_out.setTitleColor(UIColor(red: 231, green: 0, blue: 0, alpha: 1), forState: UIControlState.Disabled)
+    }
+    
+    @IBAction func exitGame() {
+        navigationController?.popViewControllerAnimated(true)
+        print("Done");
     }
     
     
@@ -180,12 +186,17 @@ class GameViewController: UIViewController {
         }
         
         var randomOperatorIndex_three: Int {
-            var ran = -1;
-            repeat {
+            var ran = randomOperatorIndex_one;
+            while( ran == randomOperatorIndex_one || ran == randomOperatorIndex_two ) {
                 ran = Int(arc4random_uniform(UInt32(Operators.count)))
-            } while( ran == randomOperatorIndex_one || ran == randomOperatorIndex_two )
+            }
             return ran;
         }
+        
+        
+        
+        
+        
         
         print("\(randomOperatorIndex_one) \(randomOperatorIndex_two) \(randomOperatorIndex_three)")
         
@@ -195,21 +206,23 @@ class GameViewController: UIViewController {
             Operators[randomOperatorIndex_three]
         ]
         
+        print( ops );
+        
         
         correctButton = Int(arc4random_uniform(3))
         
         switch ops[correctButton] {
         case "+":
-            numOne = Int(arc4random_uniform(UInt32(result) + 1))
+            numOne = Int(arc4random_uniform(UInt32(result) + 1)) + 1
             numTwo = result - numOne
             break
         case "−":
-            numTwo = Int(arc4random_uniform(UInt32(result) + 1))
+            numTwo = Int(arc4random_uniform(UInt32(result) + 1)) + 1
             numOne = result + numTwo
             break;
         case "×":
-            numOne = Int(arc4random_uniform(UInt32(10) + 1))
-            numTwo = Int(arc4random_uniform(UInt32(10) + 1))
+            numOne = Int(arc4random_uniform(UInt32(10) + 1)) + 1
+            numTwo = Int(arc4random_uniform(UInt32(10) + 1)) + 1
             result = numOne * numTwo
             break;
         case "÷":
