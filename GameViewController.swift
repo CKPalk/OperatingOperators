@@ -16,7 +16,6 @@ struct equation {
 }
 
 let Operators: Array<Character> = [ "+", "−", "×", "÷" ]
-let OperatorSet: Set<Character> = [ "+", "−", "×", "÷" ]
 
 
 
@@ -174,36 +173,21 @@ class GameViewController: UIViewController {
         var numTwo: Int = 0
         var result = Int(arc4random_uniform(100) + 1)
         
-        var randomOperatorIndex_one = Int(arc4random_uniform(UInt32(Operators.count)));
+        var operators_copy: Array<Character> = Operators
         
-        var randomOperatorIndex_two: Int {
-            var ran = -1;
-            repeat {
-                ran = Int(arc4random_uniform(UInt32(Operators.count)))
-            } while( ran == randomOperatorIndex_one )
-            
-            return ran;
-        }
+        var randomOperatorOne: Character
+        var randomOperatorTwo: Character
+        var randomOperatorThree: Character
         
-        var randomOperatorIndex_three: Int {
-            var ran = randomOperatorIndex_one;
-            while( ran == randomOperatorIndex_one || ran == randomOperatorIndex_two ) {
-                ran = Int(arc4random_uniform(UInt32(Operators.count)))
-            }
-            return ran;
-        }
+        randomOperatorOne = operators_copy.removeAtIndex( Int(rand()) % operators_copy.count );
+        randomOperatorTwo = operators_copy.removeAtIndex( Int(rand()) % operators_copy.count );
+        randomOperatorThree = operators_copy.removeAtIndex( Int(rand()) % operators_copy.count );
         
-        
-        
-        
-        
-        
-        print("\(randomOperatorIndex_one) \(randomOperatorIndex_two) \(randomOperatorIndex_three)")
         
         let ops: Array<Character> = [
-            Operators[randomOperatorIndex_one],
-            Operators[randomOperatorIndex_two],
-            Operators[randomOperatorIndex_three]
+            randomOperatorOne,
+            randomOperatorTwo,
+            randomOperatorThree
         ]
         
         print( ops );
